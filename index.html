@@ -12,16 +12,15 @@
 <body>
     <form class="form" action="">
         <div class="form__footer">
-            <button class="form__object time" type="button">Time</button>
+            <button autofocus class="form__object time" type="button">Time</button>
             <button class="form__object speed" type="button">Speed</button>
             <button class="form__object distance" type="button">Distance</button>
         </div>
-        <p class="form__activness active">select tab first</p>
-        <input type="number" class="form__input" placeholder="Distance: (km)" required>
-        <input type="number" class="form__input" placeholder="speed: (km/h)" required>
+        <input type="number" class="form__input first_input" placeholder="Distance: (km)" required>
+        <input type="number" class="form__input second_input" placeholder="Speed: (km/h)" required>
+        <button type='button' class="submit">Calculate!</button>
+        <p class="result"></p>
     </form>
-
-    
 </body>
 <script src="script.js"></script>
 </html>
