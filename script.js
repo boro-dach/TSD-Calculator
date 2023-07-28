@@ -31,38 +31,39 @@ function distanceClicked(){
 
 function calculate(){
     console.log(`counting ${active}`)
-    if (active == 'time'){
+    if (active === 'time'){
         let distance = document.getElementsByClassName('first_input')[0].value;
         let speed = document.getElementsByClassName('second_input')[0].value;
         let result = distance / speed;
-        if(isNaN(result) == true){
+        if(isNaN(result) === true){
             document.getElementsByTagName('p')[0].innerText = 'You have to input data first!';
         }
         else{
-            document.getElementsByTagName('p')[0].innerText = `It will take ${result} hour(s) to pass ${distance} kilometer(s) wiith speed of ${speed} kph.`;
+            document.getElementsByTagName('p')[0].innerText = `It will take ${result.toFixed(4)} hour(s) to pass ${distance} kilometer(s) wiith speed of ${speed} kph.`;
         }
         
     }
-    else if(active == 'speed'){
+    else if(active === 'speed'){
         let distance = document.getElementsByClassName('first_input')[0].value;
         let time = document.getElementsByClassName('second_input')[0].value;
         let result = distance / time;
-        if(isNaN(result) == true){
+        if(isNaN(result) === true){
             document.getElementsByTagName('p')[0].innerText = 'You have to input data first!';
         }
         else{
-            document.getElementsByTagName('p')[0].innerText = `You have to move with a speed of ${result} kph to pass ${distance} kilometer(s) in ${time} hour(s).`;
+            document.getElementsByTagName('p')[0].innerText = `You have to move with a speed of ${result.toFixed(4)} kph to pass ${distance} kilometer(s) in ${time} hour(s).`;
         }
     }
-    else if(active == 'dis'){
+    else if(active === 'dis'){
         let speed = document.getElementsByClassName('first_input')[0].value;
         let time = document.getElementsByClassName('second_input')[0].value;
         let result = speed * time;
-        if(isNaN(result) == true){
+        console.log(result)
+        if(result === 0){
             document.getElementsByTagName('p')[0].innerText = 'You have to input data first!';
         }
         else{
-            document.getElementsByTagName('p')[0].innerText = `You will pass ${result} kilometer(s) if you move with a speed of ${speed} kph for ${time} hour(s).`;
+            document.getElementsByTagName('p')[0].innerText = `You will pass ${result.toFixed(4)} kilometer(s) if you move with a speed of ${speed} kph for ${time} hour(s).`;
         }
     }
     else{
